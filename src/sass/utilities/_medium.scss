@@ -1,0 +1,269 @@
+@media (min-width: 768px) {
+	// <----------NAVIGANION---------->
+
+	.nav {
+		.container {
+			display: flex;
+		}
+
+		&__btn {
+			display: none;
+		}
+
+		&__items {
+			position: static;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			border-radius: 0;
+			background: none;
+			box-shadow: none;
+			transform: translateX(0);
+
+			&__item {
+				&:hover {
+					color: $white;
+					background-color: $gold;
+				}
+			}
+
+			a {
+				position: relative;
+				display: inline-block;
+				font-size: 1.4rem;
+				padding: 0.4em;
+				margin: 0;
+				border-radius: 3px;
+				text-decoration: none;
+				color: $grey;
+				text-shadow: none;
+				transition: color 0.3s, background-color 0.3s;
+
+				&:hover {
+					color: $white;
+					background-color: $gold;
+				}
+
+				&::after {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					opacity: 0;
+					background-color: $gold;
+					transition: bottom 0.3s, opacity 0.3s;
+					content: '';
+				}
+
+				&:hover::after {
+					opacity: 0;
+				}
+			}
+		}
+	}
+
+	// <----------HEADER---------->
+	.header {
+		.container {
+			padding: 0 1em;
+		}
+		.contact {
+			&__form {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-evenly;
+				flex-wrap: wrap;
+				align-items: center;
+			}
+
+			&__input {
+				width: auto;
+				margin: 0 0.3em;
+			}
+
+			&__btn {
+				width: auto;
+				padding: 0.6em 2em;
+				margin: 2em 0;
+			}
+		}
+
+		&__image {
+			bottom: -5em;
+		}
+	}
+
+	// <----------MAIN---------->
+	//services
+	.main {
+		.services-boxes {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+		}
+
+		.services-box {
+			width: 40%;
+			margin: 2em;
+		}
+
+		.section-text {
+			text-align: center;
+			margin-bottom: 2em;
+		}
+
+		.services-boxes {
+			padding: 0 0.5em;
+		}
+
+		.services-box {
+			margin-bottom: 2em;
+
+			&-img {
+				position: absolute;
+				top: 0.5em;
+				left: -3em;
+				height: 3em;
+			}
+			&-title {
+				display: inline-block;
+				font-family: 'Lato', sans-serif;
+				font-size: 1.8rem;
+			}
+
+			&-text {
+				font-family: 'Open Sans';
+				font-size: 1.4rem;
+			}
+		}
+
+		//about-us
+		.about-us {
+			display: flex;
+			width: 100%;
+
+			&__img {
+				display: block;
+				width: 50%;
+				height: auto;
+				object-fit: cover;
+			}
+
+			&__info {
+				text-align: left;
+				padding: 3em 3em;
+				.section-title {
+					margin: 2em 0 0.8em;
+					text-align: left;
+					font-size: 1.6em;
+				}
+
+				.section-text {
+					font-family: 'Open sans';
+					text-align: left;
+					margin-bottom: 5em;
+				}
+			}
+		}
+
+		//price
+		.price {
+			&__boxes {
+				flex-direction: row;
+			}
+		}
+
+		//how-it-works
+		.how-it-works {
+			.steps {
+				display: flex;
+				position: relative;
+				margin-top: 5em;
+
+				&__arrow {
+					display: inline-block;
+					width: 60%;
+					position: absolute;
+					top: 20%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+		}
+
+		//clients
+		.clients {
+			.reviews-box {
+				display: flex;
+				align-items: center;
+				text-align: left;
+				margin: 0.8em 1.2em;
+			}
+		}
+
+		//contact-us
+		.contact-us {
+			.newsletter {
+				&__form {
+					display: flex;
+					flex-direction: row;
+					// flex-wrap: wrap;
+				}
+				&__input-container {
+					width: 50%;
+				}
+
+				&__btn {
+					width: 40%;
+					max-width: 320px;
+					margin: 0 0.2em;
+				}
+			}
+
+			//address
+			.address {
+				&__map-img {
+					display: block;
+				}
+
+				&__s-bubble,
+				&__s-bubble-img,
+				&__s-bubble-logo {
+					position: absolute;
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+
+				&__s-bubble {
+					margin: 0;
+					max-width: 45%;
+					background: none;
+					border-radius: inherit;
+					padding: 0;
+
+					&-img {
+						display: block;
+						width: 230px;
+						top: 50%;
+					}
+
+					&-logo {
+						top: 150%;
+						margin-top: 0;
+					}
+
+					h3 {
+						font-size: 1.3rem;
+					}
+
+					p {
+						font-size: 1.3rem;
+					}
+				}
+			}
+		}
+	}
+}
