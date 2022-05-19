@@ -1,4 +1,7 @@
 @media (min-width: 768px) {
+	.no-touch {
+		overflow: visible;
+	}
 	// <----------NAVIGANION---------->
 
 	.nav {
@@ -22,6 +25,7 @@
 			background: none;
 			box-shadow: none;
 			transform: translateX(0);
+			opacity: 1;
 
 			&__item {
 				&:hover {
@@ -61,6 +65,11 @@
 					opacity: 0;
 				}
 			}
+		}
+	}
+	.menu-active {
+		.nav__items {
+			display: flex;
 		}
 	}
 
