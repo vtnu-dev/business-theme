@@ -30,7 +30,7 @@ body {
 	visibility: hidden;
 	opacity: 0;
 	transition-property: opacity, visibility, transform, bottom;
-	transition-duration: 1s;
+	transition-duration: .5s;
 
 	i {
 		color: $gold;
@@ -44,7 +44,11 @@ body {
 	bottom: 120px;
 	transform: rotate(0);
 	visibility: visible;
-	opacity: 1;
+	opacity: .3;
+
+	&:hover{
+		opacity: 1;
+	}
 }
 
 .no-touch {
