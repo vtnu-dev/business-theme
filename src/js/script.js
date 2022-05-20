@@ -55,6 +55,20 @@ btnMenu.addEventListener('click', toogleMenu)
 
 currentYear()
 
+
+
+let prevScrollpos = window.pageYOffset;
+
+window.addEventListener('scroll', function() {
+	let currentScrollPos = window.pageYOffset;
+	if (prevScrollpos > currentScrollPos) {
+		nav.style.top = "0";
+	} else {
+		nav.style.top = "-80px";
+	}
+	prevScrollpos = currentScrollPos;
+  })
+
 // function darkmode(){
 // 	const body = document.body
 // 	const wasDarkmode = localStorage.getItem('darkmode') === 'true'

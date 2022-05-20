@@ -13,7 +13,6 @@ body {
 	// font-family: 'Lato', sans-serif;
 	font-family: sans-serif;
 	font-size: 1.6rem;
-	
 }
 
 .key-up {
@@ -21,7 +20,7 @@ body {
 	position: fixed;
 	bottom: 1120px;
 	right: 0px;
-	padding: .5em;
+	padding: 0.5em;
 	font-size: 4.6rem;
 	text-decoration: none;
 	transform: rotate(180deg);
@@ -32,17 +31,16 @@ body {
 	text-align: center;
 	cursor: pointer;
 
-	&:active{
-			outline: none;
-			opacity: 1;
-		}
+	&:active {
+		outline: none;
+		opacity: 1;
+	}
 
 	i {
 		color: $gold;
 		background-color: $white;
 		border-radius: 50%;
 		box-shadow: 0px 0px 8px #000;
-		
 	}
 }
 
@@ -50,9 +48,11 @@ body {
 	bottom: 40px;
 	transform: rotate(0);
 	visibility: visible;
-	opacity: 0.3;}
+	opacity: 0.3;
+}
 
 .no-touch {
+	position: relative;
 	overflow: hidden;
 }
 
@@ -114,7 +114,8 @@ body {
 	height: 80px;
 	font-family: 'Lato', sans-serif;
 	background-color: $white;
-	box-shadow: 0px 0px 10px 0px $grey;
+	box-shadow: 0px 0px 10px $black;
+	transition: top 0.3s;
 	z-index: 5;
 
 	&__logo {
@@ -140,9 +141,9 @@ body {
 		list-style: none;
 		text-transform: uppercase;
 		transform: translateX(1000px);
-		transition: opacity 0.5s, transform 0.5s, display .5s;
+		transition: opacity 0.5s, transform 0.5s, display 0.5s;
 		opacity: 0;
-		z-index: 6;
+		z-index: 11;
 
 		a {
 			position: relative;
@@ -196,7 +197,7 @@ body {
 			&::after {
 				position: absolute;
 				left: 0;
-				transition: top 0.3s, left 0.3s, transform 0.3s, width 0.3s;
+				transition: top 0.1s, left 0.1s, transform 0.1s, width 0.1s;
 				content: '';
 			}
 
@@ -220,11 +221,24 @@ body {
 }
 
 .menu-active {
+	.container::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100vh;
+		background-color: rgba($color: $white, $alpha: 0.8);
+		content: '';
+		z-index: 10;
+	}
+
 	.nav__items {
 		display: block;
 		transform: translateX(0);
 		opacity: 1;
 	}
+
 	.nav__btn {
 		&--bar {
 			background-color: transparent;
@@ -252,7 +266,7 @@ body {
 // <----------HEADER---------->
 
 .header {
-	margin-top: 80px;
+	padding-top: 80px;
 
 	.container {
 		display: flex;
