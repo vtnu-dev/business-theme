@@ -29,7 +29,7 @@ const toogleMenu = () => {
 	document.addEventListener('click', e => {
 		const withinBoundaries = e.composedPath().includes(menuActive)
 		const btnWithinBoundaries = e.composedPath().includes(navBtnActive)
-		
+
 		if (!withinBoundaries && !btnWithinBoundaries) {
 			nav.classList.remove('menu-active')
 			mainPage.classList.remove('no-touch')
@@ -55,19 +55,17 @@ btnMenu.addEventListener('click', toogleMenu)
 
 currentYear()
 
+let prevScrollpos = window.pageYOffset
 
-
-let prevScrollpos = window.pageYOffset;
-
-window.addEventListener('scroll', function() {
-	let currentScrollPos = window.pageYOffset;
-	if (prevScrollpos > currentScrollPos) {
-		nav.style.top = "0";
+window.addEventListener('scroll', function () {
+	let currentScrollPos = window.pageYOffset
+	if (prevScrollpos > currentScrollPos || window.scrollY === 80) {
+		nav.style.top = '0'
 	} else {
-		nav.style.top = "-80px";
+		nav.style.top = '-80px'
 	}
-	prevScrollpos = currentScrollPos;
-  })
+	prevScrollpos = currentScrollPos
+})
 
 // function darkmode(){
 // 	const body = document.body
