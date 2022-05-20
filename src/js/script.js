@@ -59,7 +59,7 @@ let prevScrollpos = window.pageYOffset
 
 window.addEventListener('scroll', function () {
 	let currentScrollPos = window.pageYOffset
-	if (prevScrollpos > currentScrollPos || window.scrollY === 80) {
+	if (prevScrollpos > currentScrollPos || window.scrollY <= 40) {
 		nav.style.top = '0'
 	} else {
 		nav.style.top = '-80px'

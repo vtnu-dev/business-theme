@@ -266,8 +266,7 @@ body {
 // <----------HEADER---------->
 
 .header {
-	padding-top: 80px;
-
+	
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -279,6 +278,7 @@ body {
 	}
 
 	&__text {
+		padding-top: 80px;
 		margin: 5em 0 2em;
 		color: $white;
 		text-align: center;
