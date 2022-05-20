@@ -14,8 +14,6 @@ const scrollToTop = () => {
 		behavior: 'smooth',
 	})
 }
-window.addEventListener('scroll', handleKeyUp)
-keyUp.addEventListener('click', scrollToTop)
 
 const toogleMenu = () => {
 	nav.classList.toggle('menu-active')
@@ -24,13 +22,37 @@ const toogleMenu = () => {
 	navItems.forEach(item => {
 		item.addEventListener('click', toogleMenu)
 	})
-}
 
-btnMenu.addEventListener('click', toogleMenu)
+	const menuActive = document.querySelector('.nav__items')
+	const navBtnActive = document.querySelector('.nav__btn')
+
+	document.addEventListener('click', e => {
+		const withinBoundaries = e.composedPath().includes(menuActive)
+		const btnWithinBoundaries = e.composedPath().includes(navBtnActive)
+		
+		if (!withinBoundaries && !btnWithinBoundaries) {
+			nav.classList.remove('menu-active')
+			mainPage.classList.remove('no-touch')
+		}
+	})
+
+	document.addEventListener('keydown', e => {
+		if (e.keyCode == 27) {
+			// code for kye Escape, but can use e.key
+			nav.classList.remove('menu-active')
+			mainPage.classList.remove('no-touch')
+		}
+	})
+}
 
 function currentYear() {
 	footerYear.textContent = new Date().getFullYear()
 }
+
+window.addEventListener('scroll', handleKeyUp)
+keyUp.addEventListener('click', scrollToTop)
+btnMenu.addEventListener('click', toogleMenu)
+
 currentYear()
 
 // function darkmode(){
