@@ -88,9 +88,16 @@
 			}
 
 			&__input {
-				width: auto;
+				width: 100%;
 				margin: 0 0.3em;
+				
 			}
+
+			&__label{
+				i{
+					margin: 0.5em;
+				}
+            }
 
 			&__btn {
 				width: auto;
@@ -129,12 +136,13 @@
 
 		.services-box {
 			margin-bottom: 2em;
+			padding: 0 2em;
 
 			&-img {
 				position: absolute;
-				top: 0.5em;
-				left: -3em;
-				height: 3em;
+				top: 1.4em;
+				left: -2.5em;
+				// height: 50%;
 			}
 			&-title {
 				display: inline-block;

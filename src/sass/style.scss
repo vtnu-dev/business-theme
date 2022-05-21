@@ -65,17 +65,17 @@ body {
 .section-title {
 	padding: 4em 0 0em;
 	margin-bottom: 0;
-	font-size: 1.6em;
-	font-family: 'gothamlight';
+	font-size: 2em;
+	font-family: 'gothamblack';
 	text-transform: uppercase;
 	text-align: center;
 	font-weight: bold;
-	// line-height: 1em;
 }
 
 .section-text {
 	font-family: 'Open sans';
 	text-align: center;
+	font-size: 1.8rem;
 	margin-bottom: 2em;
 	padding: 0 1em;
 }
@@ -266,7 +266,6 @@ body {
 // <----------HEADER---------->
 
 .header {
-	
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -285,13 +284,15 @@ body {
 
 		h1 {
 			font-family: 'gothammedium';
-			margin-bottom: 0.5em;
-			font-size: 2.8rem;
+			margin-bottom: 0.1em;
+			font-size: 3rem;
+			font-weight: bold;
 			text-transform: uppercase;
 		}
 
 		p {
 			font-family: 'Open Sans';
+			font-size: 1.8rem;
 		}
 	}
 
@@ -318,7 +319,8 @@ body {
 			top: 50%;
 			left: 5%;
 			transform: translateY(-50%);
-			opacity: 0.3;
+			color: $grey;
+			opacity: 0.8;
 			transition: left 0.5s, opacity 0.5s;
 			cursor: text;
 		}
@@ -452,9 +454,6 @@ body {
 		padding: 2em;
 	}
 	&__box {
-		// width: 100%;
-		// min-width: 250px;
-		// max-width: 400px;
 		width: clamp(250px, 100%, 500px);
 		background-color: $white;
 		padding: 2em 1em;
@@ -538,7 +537,7 @@ body {
 
 //how-it-works
 .how-it-works {
-	margin-bottom: 5em;
+	// margin-bottom: 4em;
 	.steps {
 		&__arrow {
 			display: none;
@@ -566,6 +565,26 @@ body {
 
 			&-text {
 				font-family: 'Open Sans';
+			}
+		}
+	}
+
+	&__start {
+		margin: 6em;
+		text-align: center;
+		&-btn {
+			display: inline-block;
+			text-align: center;
+			text-align: center;
+			padding: 0.8em 1.6em;
+			background-color: $gold;
+			color: $white;
+			text-transform: uppercase;
+			text-decoration: none;
+			cursor: pointer;
+
+			&:hover {
+				color: $white;
 			}
 		}
 	}
@@ -645,10 +664,15 @@ body {
 			position: absolute;
 			top: 50%;
 			left: 5%;
+			color: $grey;
 			transform: translateY(-50%);
-			opacity: 0.3;
+			opacity: .8;
 			transition: left 0.5s, opacity 0.5s;
 			cursor: text;
+
+			i{
+				margin: .2em;
+			}
 		}
 
 		.newsletter__input:focus ~ .newsletter__label,
@@ -679,10 +703,10 @@ body {
 		}
 
 		&__s-bubble {
-			width: clamp(70%, 300px, 100%);
+			max-width: 300px;
 			margin: 3em auto 0;
 			text-align: center;
-			background-color: #707070;
+			background-color: #394B50;
 			border-radius: 50%;
 			padding: 2em;
 			z-index: 1;
@@ -730,25 +754,30 @@ body {
 		p {
 			text-align: center;
 			font-size: 2.6rem;
-
-			img {
-				width: 0.7em;
-				margin-right: 0.3em;
+			
+			.fa-phone,a{
+				color: $grey;
+				
+			}
+			.fa-phone{
+				font-size: 2rem;
 			}
 
 			a {
 				text-decoration: none;
-				color: $black;
 			}
 		}
 	}
 
 	&__icons {
 		text-align: center;
-		font-size: 2.6rem;
-		img {
-			width: 0.7em;
-			margin: 0 0.3em;
+		font-size: 2rem;
+		.fa-brands {
+			padding: .4em;
+			color: $blue;
+		}
+		.fa-twitter{
+			color: $gold;
 		}
 	}
 }

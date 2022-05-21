@@ -1,3 +1,14 @@
+@media (max-width: 576px) {
+	// <----------NAV---------->
+	.menu-active {
+		.nav__items {
+			a {
+				margin: 0.5em;
+			}
+		}
+	}
+}
+
 @media (min-width: 576px) {
 	// <----------HEADER---------->
 	.header {
