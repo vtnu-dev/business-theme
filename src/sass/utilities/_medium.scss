@@ -4,7 +4,18 @@
 	}
 	// <----------NAVIGANION---------->
 
+	.menu-active {
+		display: none;
+		.nav__items {
+			display: flex;
+		}
+		.container::before {
+			display: none;
+		}
+	}
+
 	.nav {
+		display: block;
 		.container {
 			display: flex;
 		}
@@ -67,11 +78,7 @@
 			}
 		}
 	}
-	.menu-active {
-		.nav__items {
-			display: flex;
-		}
-	}
+	
 
 	// <----------HEADER---------->
 	.header {
