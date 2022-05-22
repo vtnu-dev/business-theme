@@ -43,6 +43,12 @@ const toogleMenu = () => {
 			mainPage.classList.remove('no-touch')
 		}
 	})
+
+	document.addEventListener('scroll', () => {
+		nav.classList.remove('menu-active')
+		mainPage.classList.remove('no-touch')
+	})
+
 }
 
 function currentYear() {
@@ -81,3 +87,9 @@ window.addEventListener('scroll', function () {
 // 	document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true')
 // }
 // document.addEventListener('DOMContentLoaded', onload)
+
+
+////////////////////=============== Screen Orientation API
+// alert(screen.orientation.type);
+	// landscape-primary
+	// portrait-primary

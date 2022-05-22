@@ -9,7 +9,15 @@
 	}
 }
 
-@media (min-width: 576px) {
+@media (min-width: 568px) {
+    // <----------NAV---------->
+	.menu-active {
+		.nav__items {
+            width: 50%;
+		}
+	}
+    
+    
 	// <----------HEADER---------->
 	.header {
 		.container {
