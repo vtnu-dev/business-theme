@@ -45,7 +45,7 @@ body {
 }
 
 .key-up-visible {
-	bottom: 40px;
+	bottom: 0;
 	transform: rotate(0);
 	visibility: visible;
 	opacity: 0.3;
@@ -322,13 +322,13 @@ body {
 			transform: translateY(-50%);
 			color: $grey;
 			opacity: 0.8;
-			transition: left 0.5s, opacity 0.5s;
+			transition: left 0.5s, opacity 0.3s;
 			cursor: text;
 		}
 
 		.contact__input:focus ~ .contact__label,
 		.contact__input:valid ~ .contact__label {
-			left: 70%;
+			left: 30%;
 			opacity: 0;
 		}
 		// input:focus + label,
@@ -571,7 +571,7 @@ body {
 	}
 
 	&__start {
-		margin: 6em;
+		margin: 6em 0;
 		text-align: center;
 		&-btn {
 			display: inline-block;
@@ -668,7 +668,7 @@ body {
 			color: $grey;
 			transform: translateY(-50%);
 			opacity: .8;
-			transition: left 0.5s, opacity 0.5s;
+			transition: left 0.5s, opacity 0.3s;
 			cursor: text;
 
 			i{
@@ -678,7 +678,7 @@ body {
 
 		.newsletter__input:focus ~ .newsletter__label,
 		.newsletter__input:valid ~ .newsletter__label {
-			left: 70%;
+			left: 30%;
 			opacity: 0;
 		}
 
