@@ -757,15 +757,26 @@ body {
 			font-size: 2.6rem;
 			
 			.fa-phone,a{
-				color: $grey;
-				
+            color: $grey;
+            transition: color .3s;
 			}
+
 			.fa-phone{
 				font-size: 2rem;
 			}
 
 			a {
 				text-decoration: none;
+
+            &:hover{
+               color: $gold;
+
+               .fa-phone{
+                  color: $gold;
+               }
+
+               
+            }
 			}
 		}
 	}
@@ -776,9 +787,11 @@ body {
 		.fa-brands {
 			padding: .4em;
 			color: $blue;
-		}
-		.fa-twitter{
-			color: $gold;
+         transition: color .3s;
+
+         &:hover{
+            color: $gold;
+         }
 		}
 	}
 }
