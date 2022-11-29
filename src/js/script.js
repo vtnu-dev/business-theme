@@ -73,23 +73,3 @@ window.addEventListener('scroll', function () {
 	prevScrollpos = currentScrollPos
 })
 
-// function darkmode(){
-// 	const body = document.body
-// 	const wasDarkmode = localStorage.getItem('darkmode') === 'true'
-
-// 	localStorage.setItem('darkmode', !wasDarkmode)
-// 	body.classList.toggle('dark-mode', !wasDarkmode)
-// }
-
-// document.querySelector('.btn').addEventListener('click', darkmode)
-
-// function onload() {
-// 	document.body.classList.toggle('dark-mode', localStorage.getItem('darkmode') === 'true')
-// }
-// document.addEventListener('DOMContentLoaded', onload)
-
-
-////////////////////=============== Screen Orientation API
-// alert(screen.orientation.type);
-	// landscape-primary
-	// portrait-primary

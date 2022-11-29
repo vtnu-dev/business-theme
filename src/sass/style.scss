@@ -6,11 +6,6 @@ html {
 }
 
 body {
-	// font-family: 'gothamlight', 'sans-serif';
-	// font-family: 'gothammedium', 'sans-serif';
-	// font-family: 'gothamblack', 'sans-serif';
-	// font-family: 'Open Sans', sans-serif;
-	// font-family: 'Lato', sans-serif;
 	font-family: sans-serif;
 	font-size: 1.6rem;
 }
@@ -372,6 +367,12 @@ body {
 	.services-box {
 		position: relative;
 		margin-bottom: 2em;
+		padding: 0 1em;
+		transition: transform .3s;
+
+		&:hover{
+			transform: translateY(-5px);
+		}
 
 		&-img {
 			display: block;
